@@ -27,9 +27,13 @@ const prev = document.querySelector('.prev');
 //funzione per mostare l'immagine successiva al click
 next.addEventListener('click',
     function () {
+        prev.classList.remove('hidden'); // rimuove hidden da prev
         image[active].classList.remove('show');
         active++;
         image[active].classList.add('show');
+        if (active == images.length - 1) { //condizione che permette (una volta raggiunta l'ultima immagine) di nascondere (tramite css con una classe) il pulsante next
+            next.classList.add('hidden');
+        }
     }
 )
 
@@ -39,6 +43,9 @@ prev.addEventListener('click',
         image[active].classList.remove('show');
         active--;
         image[active].classList.add('show');
+        next.classList.remove('hidden');
+        if (active == images.length - 5) { //condizione che permette (una volta raggiunta la prima immagine) di riassegnare la classe "hidden" al pulsante prev
+            prev.classList.add('hidden');
+        }
     }
 ) 
-
