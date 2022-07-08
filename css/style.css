@@ -3,3 +3,59 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position: relative;
+}
+
+.images{
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.next i{
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, .5);
+    font-size: 30px;
+    border-radius: 50%;
+    padding: .3rem;
+    cursor: pointer;
+}
+
+.prev i{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, .5);
+    font-size: 30px;
+    border-radius: 50%;
+    padding: .3rem;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
