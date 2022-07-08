@@ -27,7 +27,7 @@ const prev = document.querySelector('.prev');
 //funzione per mostare l'immagine successiva al click
 next.addEventListener('click',
     function () {
-        prev.classList.remove('hidden'); // rimuove hidden da prev
+        prev.classList.remove('hidden'); // rimuove hidden da prev (default in HTML)
         image[active].classList.remove('show');
         active++;
         image[active].classList.add('show');
