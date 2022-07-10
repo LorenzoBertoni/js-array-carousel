@@ -24,28 +24,26 @@ image[active].classList.add('show');
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 
-//funzione per mostare l'immagine successiva al click
 next.addEventListener('click',
+//funzione per mostare l'immagine successiva al click
     function () {
-        prev.classList.remove('hidden'); // rimuove hidden da prev (default in HTML)
         image[active].classList.remove('show');
         active++;
-        image[active].classList.add('show');
-        if (active == images.length - 1) { //condizione che permette (una volta raggiunta l'ultima immagine) di nascondere (tramite css con una classe) il pulsante next
-            next.classList.add('hidden');
+        if (active == images.length) { 
+            active = 0;
         }
+        image[active].classList.add ('show');
     }
 )
 
-//funzione per mostare l'immagine precedente
+//funzione per mostare l'immagine precedente al click
 prev.addEventListener('click',
     function () {
         image[active].classList.remove('show');
         active--;
-        image[active].classList.add('show');
-        next.classList.remove('hidden');
-        if (active == images.length - 5) { //condizione che permette (una volta raggiunta la prima immagine) di riassegnare la classe "hidden" al pulsante prev
-            prev.classList.add('hidden');
+        if (active == images.length - 6) { 
+            active = 4;
         }
+        image[active].classList.add('show');
     }
 ) 

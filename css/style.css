@@ -13,7 +13,6 @@ body{
 
 .container{
     position: relative;
-    /* display: flex; */
 }
 
 .images{
@@ -59,16 +58,20 @@ body{
 .hidden {
     display: none;
 }
-/* 
-.carousel{
+
+.aside{
     width: 20vw;
     height: 50vh;
     display: flex;
     flex-direction: column;
 }
 
-.carousel-img {
+.aside-img {
     width: 100%;
     height: 10vh;
     object-fit: cover;
-} */
+}
+
+.layer{
+    filter:opacity(.5);
+}
